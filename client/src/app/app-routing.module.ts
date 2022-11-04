@@ -8,13 +8,25 @@ import { ResumeComponent } from './pages/resume/resume.component';
 import { ServicesComponent } from './pages/services/services.component';
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent, data: { title: 'Aspiring Software Engineering' } },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: 'about', component: AboutComponent },
-  { path: 'resume', component: ResumeComponent },
-  { path: 'projects', component: ProjectsComponent },
-  { path: 'services', component: ServicesComponent },
-  { path: 'contact', component: ContactComponent },
+  { path: 'about', component: AboutComponent, data: { title: 'About Me' } },
+  { path: 'resume', component: ResumeComponent, data: { title: 'Resume' } },
+  {
+    path: 'projects',
+    component: ProjectsComponent,
+    data: { title: 'Projects' },
+  },
+  {
+    path: 'services',
+    component: ServicesComponent,
+    data: { title: 'Services' },
+  },
+  {
+    path: 'contact',
+    component: ContactComponent,
+    data: { title: 'Hit me up!' },
+  },
 ];
 
 @NgModule({

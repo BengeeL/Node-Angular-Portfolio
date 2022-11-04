@@ -11,6 +11,7 @@ import { ProjectsComponent } from './pages/projects/projects.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ResumeComponent } from './pages/resume/resume.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { BasePageComponent } from './partials/base-page/base-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ContactComponent } from './pages/contact/contact.component';
     ProjectsComponent,
     ServicesComponent,
     ResumeComponent,
-    ContactComponent
+    ContactComponent,
+    BasePageComponent
   ],
   imports: [
     BrowserModule,

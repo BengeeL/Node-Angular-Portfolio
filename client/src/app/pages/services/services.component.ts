@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-
+import { BasePageComponent } from 'src/app/partials/base-page/base-page.component';
+import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-services',
   templateUrl: './services.component.html',
-  styleUrls: ['./services.component.css']
+  styleUrls: ['./services.component.css'],
 })
-export class ServicesComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
+export class ServicesComponent extends BasePageComponent implements OnInit {
+  constructor(route: ActivatedRoute) {
+    super(route);
   }
 
+  ngOnInit(): void {}
 }

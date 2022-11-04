@@ -1,1 +1,138 @@
-<p>projects works!</p>
+<!-- projects.ejs - Benjamin Lefebvre - 301234587 - Sept 29th  -->
+<div class="container-fluid bg-dark text-light p-5">
+  <div class="container bg-dark p-5">
+    <app-base-page></app-base-page>
+    <!-- Projects Card -->
+    <div class="text-dark">
+      <div class="row">
+        <div class="col-lg-6">
+          <!-- Project1 -->
+          <div class="card h-100">
+            <img
+              src="/assets/images/project1.png"
+              class="card-img-top"
+              alt="portfolio"
+            />
+            <div class="card-body d-flex flex-column">
+              <h3>Portfolio</h3>
+              <p class="card-text">
+                This portfolio is a complete website built using NodeJS and EJS
+                templating. It contains my numeric business card, my projects,
+                my blog, my resume and a contact section. The contact form uses
+                Nodemailer to send emails to my email without the need to open
+                an email app on the desktop, and the website is hosted on
+                Firebase. The blog uses MongoDB Atlas for hosting.
+              </p>
+              <div class="d-grid gap-2 mt-auto">
+                <a
+                  href="https://github.com/BengeeL/Portfolio3.0"
+                  class="btn btn-light"
+                  ><i class="fa-brands fa-github"></i> See Github</a
+                >
+                <a href="https://benjaminlefebvre.dev" class="btn btn-primary"
+                  >Visit Website</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <!-- Project2 -->
+          <div class="card h-100">
+            <img
+              src="/assets/images/project2.png"
+              class="card-img-top"
+              alt="keeper app"
+            />
+            <div class="card-body d-flex flex-column">
+              <h3>Keeper App</h3>
+              <p class="card-text">
+                This Keeper App is a simple replica of Google keep built with
+                React to practice working with states. It allows users to add or
+                delete notes that include a title and body.
+              </p>
+              <div class="d-grid gap-2 mt-auto">
+                <a
+                  href="https://codesandbox.io/s/using-pre-built-react-components-forked-woht78?file=/src/components/App.jsx"
+                  class="btn btn-light"
+                  ><i class="fa-solid fa-cube"></i> CodeSandbox</a
+                >
+                <a href="https://woht78.csb.app/" class="btn btn-primary"
+                  >Visit Website</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <!-- Project3 -->
+          <div class="card h-100">
+            <img
+              src="/assets/images/project3.png"
+              class="card-img-top"
+              alt="to-do list"
+            />
+            <div class="card-body d-flex flex-column">
+              <h3>To-do list</h3>
+              <p class="card-text">
+                This to-do list can handle multiple checklists based on the URL
+                root, where the name needs to be indicated at the end of the
+                URL. MongoDB Atlas is used to host the list.
+              </p>
+              <div class="d-grid gap-2 mt-auto">
+                <a
+                  href="https://github.com/BengeeL/TodoListNodeJS"
+                  class="btn btn-light"
+                  ><i class="fa-brands fa-github"></i> See Github</a
+                >
+                <a
+                  href="https://todolistejsnode.herokuapp.com/"
+                  class="btn btn-primary"
+                  >Visit Website</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <!-- Project4 -->
+          <div class="card h-100">
+            <img
+              src="/assets/images/project4.png"
+              class="card-img-top"
+              alt="secrets"
+            />
+            <div class="card-body d-flex flex-column">
+              <h3>Secrets</h3>
+              <p class="card-text">
+                This Secrets App anonymously hosts all the most profound secrets
+                people were willing to share with the help of MongoDB Atlas. It
+                was made possible by using OAuth 2.0. To access the platform,
+                users need to identify themselves via a custom account or by the
+                use of 3rd party apps like Google and Facebook.
+              </p>
+              <div class="d-grid gap-2 mt-auto">
+                <a
+                  href="https://github.com/BengeeL/secretApp"
+                  class="btn btn-light"
+                  ><i class="fa-brands fa-github"></i> See Github</a
+                >
+                <a
+                  href="https://secretappid.herokuapp.com/"
+                  class="btn btn-primary"
+                  >Visit Website</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br />
+    <div class="d-grid gap-2"> <!-- Button end of page taking 100% width each -->
+      <a href="/resume" class="btn btn-light">See resume</a>
+      <a href="/contact" class="btn btn-primary">Contact me</a>
+    </div>
+  </div>
+</div>
