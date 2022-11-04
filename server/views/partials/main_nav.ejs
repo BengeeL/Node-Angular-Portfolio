@@ -1,0 +1,97 @@
+<!-- main_nav.ejs - Benjamin Lefebvre - 301234587 - Sept 29th  -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+    <!-- Logo -->
+    <a class="navbar-brand" href="/home">
+        <img src="/assets/images/logo.png" alt="logo" type="image/png"/>
+    </a>
+
+    <!-- Hamburger Menu for mobile -->
+    <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+    >
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Nav list -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+
+        <li class="nav-item"></li>
+        <% if (title === "Home") { %>
+            <a class="nav-link active" href="/home">Home</a>
+        <% } else { %>
+            <a class="nav-link" href="/home">Home</a>
+        <% } %>
+        </li>
+
+        <li class="nav-item"></li>
+        <% if (title === "About Me" || title === "Resume") { %>
+            <a class="nav-link active" href="/about">About Me</a>
+        <% } else { %>
+            <a class="nav-link" href="/about">About</a>
+        <% } %>
+        </li>
+
+        <li class="nav-item"></li>
+        <% if (title === "Projects") { %>
+            <a class="nav-link active" href="/projects">Projects</a>
+        <% } else { %>
+            <a class="nav-link" href="/projects">Projects</a>
+        <% } %>
+        </li>
+
+        <li class="nav-item"></li>
+        <% if (title === "Services") { %>
+            <a class="nav-link active" href="/services">Services</a>
+        <% } else { %>
+            <a class="nav-link" href="/services">Services</a>
+        <% } %>
+        </li>
+
+        <li class="nav-item"></li>
+        <% if (title === "Contact") { %>
+            <a class="nav-link active" href="/contact">Contact</a>
+        <% } else { %>
+            <a class="nav-link" href="/contact">Contact</a>
+        <% } %>
+        </li>
+
+        <li class="nav-item"></li>
+        <% if (title === "Business Contacts List" || title === "Add Business Contact" || title === "Edit Business Contact") { %>
+            <a class="nav-link active" href="/business_contact">Connexions</a>
+        <% } else { %>
+            <a class="nav-link" href="/business_contact">Connexions</a>
+        <% } %>
+        </li>
+
+        <% if(typeof displayName == 'string' && displayName ) { %>
+            <li class="navbar-text"><i class="fas fa-user"></i> Welcome, <%= displayName %></li>
+            <li class="nav-item">
+                <a href="/logout" class="nav-link">
+                    <i class="fas fa-sign-out-alt"></i> Logout
+                </a>
+            </li>
+        <% } else { %>
+            <li class="nav-item"></li>
+        <% if (title === "Please Login" || title === "Please Register") { %>
+            <a class="nav-link active" href="/login">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </a>
+        <% } else { %>
+            <a class="nav-link" href="/login">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </a>
+        <% } %>
+        </li>
+        <%}%>
+
+    </div>
+    </div>
+</nav>

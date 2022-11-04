@@ -1,0 +1,90 @@
+<!-- contact.ejs - Benjamin Lefebvre - 301234587 - Oct 5th  -->
+<%- include('../partials/header'); -%> <%- include('../partials/main_nav'); -%>
+
+<main>
+  <div class="container text-light">
+    <!-- Page Header -->
+    <h1 class="display-4"><%= title %></h1>
+    <hr />
+    <br />
+
+    <!-- Table of contacts -->
+    <div class="row">
+      <% if(typeof displayName == 'string' && displayName ) { %>
+        <a
+          href="/business_contact/add"
+          class="btn btn-primary btn-top-table"
+          role="button"
+        >
+          <i class="fas fa-plus-circle"></i> Add a Contact
+        </a>
+      <% } %>
+
+     
+      <table class="table table-bordered table-striped table-hover">
+        <!-- Header Row -->
+        <tr class="d-flex">
+          <% if(typeof displayName == 'string' && displayName ) { %>
+            <th class="text-center text-light col-2">Name</th>
+            <th class="text-center text-light col-3">Phone</th>
+            <th class="text-center text-light col-5">Email</th>
+            <th class="text-center text-light col-1"></th>
+            <th class="text-center text-light col-1"></th>
+          <% } else { %>
+            <th class="text-center text-light col-3">Name</th>
+            <th class="text-center text-light col-3">Phone</th>
+            <th class="text-center text-light col-6">Email</th>
+          <% } %>
+
+        </tr>
+
+        <!-- Template row of data -->
+        <% for(let i = 0; i < ContactList.length; i++) { %>
+        <tr class="d-flex">
+          <% if(typeof displayName == 'string' && displayName ) { %>
+            <td class="text-center text-light col-2">
+              <%= ContactList[i].name %>
+            </td>
+            <td class="text-center text-light col-3">
+              <%= ContactList[i].phone %>
+            </td>
+            <td class="text-center text-light col-5 col-email">
+              <%= ContactList[i].email %>
+            </td>
+            <td class="text-center text-light col-1">
+              <a
+                href="/business_contact/edit/<%= ContactList[i]._id %>"
+                class="btn btn-primary btn-sm"
+                role="button"
+              >
+                <i class="fas fa-pencil-alt"></i><br />
+              </a>
+            </td>
+            <td class="text-center text-light col-1">
+              <a
+                href="/business_contact/delete/<%= ContactList[i]._id %>"
+                class="btn btn-danger btn-sm"
+                role="button"
+              >
+                <i class="fas fa-trash-alt"></i><br />
+              </a>
+            </td>
+          <% } else { %>
+            <td class="text-center text-light col-3">
+              <%= ContactList[i].name %>
+            </td>
+            <td class="text-center text-light col-3">
+              <%= ContactList[i].phone %>
+            </td>
+            <td class="text-center text-light col-6 col-email">
+              <%= ContactList[i].email %>
+            </td>
+          <% } %>
+        </tr>
+        <% } %>
+      </table>
+    </div>
+  </div>
+</main>
+
+<%- include('../partials/bottom_nav'); -%> <%-include('../partials/footer'); -%>

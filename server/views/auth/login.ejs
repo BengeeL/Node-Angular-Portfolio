@@ -1,0 +1,58 @@
+<!-- login.ejs - Benjamin Lefebvre - 301234587 - Oct 22nd  -->
+
+<%- include('../partials/header'); -%> <%- include('../partials/main_nav'); -%>
+
+<main>
+  <div class="container text-light">
+    <div class="row">
+      <div class="offset-md-3 col-md-6">
+        <!-- Page Header -->
+        <h1 class="display-4"><%= title %></h1>
+        <hr />
+        <br />
+        <!-- Message Area -->
+        <% if (messages.length > 0) {%>
+        <div class="alert-danger"><%= messages %></div>
+        <%}%>
+        <form class="form" method="POST" autocomplete="off">
+          <fieldset class="form-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              class="form-control"
+              id="username"
+              name="username"
+              placeholder="Enter username"
+              required
+              autofocus
+            />
+          </fieldset>
+
+          <fieldset class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              name="password"
+              placeholder="Enter password"
+              required
+            />
+            or
+            <a href="/register">Register Here</a>
+          </fieldset>
+          <br />
+          <fieldset class="form-group text-right">
+            <input type="submit" class="btn btn-primary" value="Login" />
+            <a href="/">
+              <input type="button" class="btn btn-warning" value="Cancel" />
+            </a>
+          </fieldset>
+        </form>
+      </div>
+    </div>
+  </div>
+</main>
+
+<%- include('../partials/bottom_nav'); -%> <%- include('../partials/footer');
+-%>

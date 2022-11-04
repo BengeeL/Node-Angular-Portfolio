@@ -1,0 +1,77 @@
+<!-- edit.ejs - Benjamin Lefebvre - 301234587 - Oct 22nd  -->
+
+<%- include('../partials/header'); -%> <%- include('../partials/main_nav'); -%>
+
+<main>
+  <div class="container text-light">
+    <!-- Page Header -->
+    <h1 class="display-4"><%= title %></h1>
+    <hr />
+    <br />
+
+    <!-- Edit form -->
+    <div class="row">
+      <form class="form needs-validation" method="POST" novalidate>
+        <div class="form-group">
+          <label for="nameTxtFld">Contact Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name="name"
+            id="nameTxtFld"
+            placeholder="John Snow"
+            value="<%= contact.name %>"
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please provide a full name.</div>
+        </div>
+
+        <div class="form-group">
+          <label for="phoneTxtFld">Phone Number</label>
+          <input
+            type="tel"
+            class="form-control"
+            name="phone"
+            id="phoneTxtFld"
+            placeholder="855-123-1234"
+            value="<%= contact.phone %>"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">
+            Please provide a valid phone number using xxx-xxx-xxxx format.
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="emailTxtFld">Email</label>
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="emailTxtFld"
+            value="<%= contact.email %>"
+            placeholder="example@gmail.com"
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+          <div class="invalid-feedback">Please provide a valid email.</div>
+        </div>
+        <br />
+
+        <button class="btn btn-primary" type="submit">
+          <i class="fas fa-edit"></i> Submit
+        </button>
+        <a href="/business_contact" class="btn btn-warning"
+          ><i class="fas fa-undo"></i> Cancel</a
+        >
+      </form>
+    </div>
+  </div>
+</main>
+
+<script src="/scripts/form_validation.js"></script>
+
+<%- include('../partials/bottom_nav'); -%> <%-include('../partials/footer'); -%>

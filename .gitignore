@@ -1,0 +1,5 @@
+# .gitignore - Benjamin Lefebvre - 301234587 - Sept 29th 
+node_modules
+.DStore
+.vscode
+.env

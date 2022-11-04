@@ -1,0 +1,83 @@
+/* app.css - Benjamin Lefebvre - 301234587 - Sept 29th */
+/* Custom css goes here */
+
+/* Generic */
+/* Nav Bar */
+/* Logo upper center */
+@media screen and (min-width: 992px) {
+  .navbar .container-fluid {
+    flex-direction: column;
+  }
+}
+
+/* Button */
+.btn-primary {
+  background-color: #01a49a !important;
+  border-color: #01a49a;
+}
+.btn-primary:hover {
+  background-color: #01705f !important;
+  border-color: #01705f !important;
+}
+
+/* Footer */
+.navbar-text {
+  text-align: center;
+  width: 100%;
+}
+
+/* About Me */
+/* Images */
+.img-profil {
+  width: 100%;
+  padding: 2%;
+  border-radius: 50%;
+}
+
+.col-md,
+.col-lg-6 {
+  margin: 3% 0;
+}
+
+/* Contact Me */
+/* Links */
+a {
+  color: #fff;
+}
+a:hover {
+  color: #01705f;
+}
+
+/* Contact message result */
+.contact-result {
+  display: none;
+}
+
+.contact-success {
+  font-size: x-small;
+  color: #9ae26c;
+  display: block;
+}
+
+.contact-error {
+  font-size: x-small;
+  color: #ff7a5a;
+  display: block;
+}
+
+/* Contact list */
+/* Email formating */
+th {
+  font-size: large;
+}
+
+.col-email {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.btn-top-table {
+  border-radius: 25px 25px 0 0 ;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}

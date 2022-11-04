@@ -1,0 +1,18 @@
+<!-- content.ejs - Benjamin Lefebvre - 301234587 - Sept 29th  -->
+<main>
+  <% if (title === "Home") { %>
+    <%- include('home'); -%>
+  <% } else if (title === "About Me") { %>
+    <%- include('about'); -%>
+    <% } else if (title === "Resume") { %>
+    <%- include('resume'); -%>
+  <% } else if (title === "Projects") { %>
+    <%- include('projects'); -%>
+  <% } else if (title === "Services") { %>
+    <%- include('services'); -%>
+  <% } else if (title === "Contact") { %>
+    <%- include('contact'); -%>
+  <% } else  { %>
+    <%- include('../error'); -%>
+  <% } %>
+</main>
